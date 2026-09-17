@@ -42,7 +42,7 @@ robustness.
 ## Layout
 
 ```
-selaur/           the algorithm — see selaur/README.md for the walkthrough
+selaur/           the algorithm
   advantage.py      uncertainty-aware two-level advantage (entry point)
   uncertainty/      signals · smoothing · transforms · estimator
   baselines/        GiGPO = SELAUR with shaping switched off
@@ -51,6 +51,9 @@ verl/             RL engine; `trainer/config/ppo_trainer.yaml` holds `selaur:`
 examples/         launch scripts — selaur_trainer/ is the main one
 tests/selaur/     unit tests for the algorithm
 ```
+
+**[`selaur/README.md`](selaur/README.md) is the algorithm walkthrough** — start
+there to understand the method.
 
 Paper → code: `entropy`/`least-confidence`/`margin` are `step_entropy`/
 `step_nll`/`step_top2_margin` in `selaur/uncertainty/signals.py`; the combined
